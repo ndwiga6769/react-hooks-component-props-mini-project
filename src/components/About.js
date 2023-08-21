@@ -1,10 +1,11 @@
 import React from "react";
 
 function About (props){
-    const myImage = <img src={props.image} alt = "blog logo"/>
+    const myImage = props.image || "https://via.placeholder.com/215"
 return(
     <aside>
         {myImage}
+        <img src={myImage} alt="blog logo"/>
         <p>{props.about}</p>
     </aside>
 )
